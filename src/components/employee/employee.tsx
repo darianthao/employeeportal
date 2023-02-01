@@ -6,18 +6,31 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {blue, red} from "@mui/material/colors";
+import DeleteIcon from '@mui/icons-material/Delete';
+import {CardMedia} from "@mui/material";
 
 
 const card = (
     <React.Fragment>
-        <CardContent>
-            <Typography sx={{ fontSize: 16 }} color="text.secondary">
-                Employee Name
-            </Typography>
-        </CardContent>
-        <CardActions >
-            <Button size="small">View</Button>
-        </CardActions>
+        <Card sx={{ maxWidth: 300 }}>
+            <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                    Employee Name
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                    Job Title
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size="small" variant="outlined">See More</Button>
+                <Button variant="outlined" startIcon={<DeleteIcon />}>
+                    Delete
+                </Button>
+                <Button variant="outlined" startIcon={<DeleteIcon />}>
+                    Edit
+                </Button>
+            </CardActions>
+        </Card>
     </React.Fragment>
 );
 
