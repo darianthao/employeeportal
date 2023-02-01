@@ -1,0 +1,21 @@
+
+* {
+    background-color: #1b263b;
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #e0e1dd;
+}
+
+.employee_portal_title{
+    font-size: 140px;
+    -webkit-text-stroke-color: #91a1d0;
+    -webkit-text-stroke-width: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
