@@ -4,13 +4,13 @@ html, body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     line-height: 1.6;
     font-size: 18px;
-    color: #e0e1dd;
+    color: #415a77;
     background-color: #1b263b;
 }
 
 .employee_portal_title{
-    font-size: 140px;
-    -webkit-text-stroke-color: #91a1d0;
+    font-size: 120px;
+    -webkit-text-stroke-color: #ffffff;
     -webkit-text-stroke-width: 3px;
     display: flex;
     align-items: center;
@@ -31,4 +31,24 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.card_actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add_employee_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-field {
+    margin-top: 20px;
+}
+
+.add_employee_button_modal{
+    margin-top: 20px;
 }

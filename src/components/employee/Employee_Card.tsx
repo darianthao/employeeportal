@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit'
 
 
 
@@ -42,6 +43,7 @@ export function Employee_Card(props: Props) {
     const department = props.departments.filter((departments) => {
         return departments.id == props.user.departmentId;
     })
+
     /*
     function addCard(){
         props.setPeople([...props.people, newEmployee])
@@ -50,13 +52,13 @@ export function Employee_Card(props: Props) {
      */
 
     return (
-        <Card sx={{ maxWidth: 300 }}>
+        <Card sx={{ width: 300 }}>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                     {props.user.firstName} {props.user.lastName}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    <ul>
+                    <ul style={{fontSize: 24}}>
                         <li>
                             {props.user.jobTitle}
                         </li>
@@ -66,11 +68,11 @@ export function Employee_Card(props: Props) {
                     </ul>
                 </Typography>
             </CardContent>
-            <CardActions>
+            <CardActions className="card_actions">
                 <Button variant="outlined" startIcon={<DeleteIcon />} onClick={deleteCard}>
                     Delete
                 </Button>
-                <Button variant="outlined" startIcon={<DeleteIcon />}>
+                <Button variant="outlined" startIcon={<EditIcon />}>
                     Edit
                 </Button>
             </CardActions>
