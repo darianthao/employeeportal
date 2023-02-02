@@ -1,5 +1,5 @@
 import { Inter } from '@next/font/google'
-import {Employee} from "@/components/employee/employee";
+import {Employee} from "@/components/employee/Employee";
 
 const inter = Inter({ subsets: ['latin'] })
 
