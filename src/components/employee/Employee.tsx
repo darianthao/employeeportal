@@ -30,7 +30,7 @@ export function Employee() {
             {people && people.map((users, index) => {
                 return(
                 <div key={index} className="grid-item">
-                    <Employee_Card user={users} setPeople={setPeople} people={people}/>
+                    <Employee_Card user={users} setPeople={setPeople} people={people} departments={departments}/>
                 </div>
                 )
             })}

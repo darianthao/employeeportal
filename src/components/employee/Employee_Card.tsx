@@ -17,8 +17,14 @@ interface User {
 
 }
 
+interface Department {
+    id: string;
+    name: string;
+}
+
 interface Props {
     user: User;
+    departments: Department[];
     people: User[];
     setPeople: React.Dispatch<React.SetStateAction<User[]>>;
 }
@@ -32,6 +38,10 @@ export function Employee_Card(props: Props) {
             return user.id != props.user.id;
         }))
     }
+
+    const department = props.departments.filter((departments) => {
+        return departments.id == props.user.departmentId;
+    })
     /*
     function addCard(){
         props.setPeople([...props.people, newEmployee])
@@ -46,11 +56,17 @@ export function Employee_Card(props: Props) {
                     {props.user.firstName} {props.user.lastName}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {props.user.jobTitle}
+                    <ul>
+                        <li>
+                            {props.user.jobTitle}
+                        </li>
+                        <li>
+                            {department[0].name}
+                        </li>
+                    </ul>
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" variant="outlined">See More</Button>
                 <Button variant="outlined" startIcon={<DeleteIcon />} onClick={deleteCard}>
                     Delete
                 </Button>
